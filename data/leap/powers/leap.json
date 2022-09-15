@@ -1,0 +1,135 @@
+{
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:if_else_list",
+		"actions": [
+			{
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:add_velocity",
+							"space": "local",
+							"z": 1
+						},
+						{
+							"type": "origins:change_resource",
+							"resource": "leap:variables_exhaust",
+							"change": 12
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "particle minecraft:cloud ~ ~0.2 ~ 0.5 0 0.5 0 10 normal @s"
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "entity.fox.spit",
+							"volume": 10.0,
+							"pitch": 0.7
+						},
+						{
+							"type": "origins:exhaust",
+							"amount": 0.1
+						}
+					]
+				},
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:on_block",
+							"inverted": true
+						},
+						{
+							"type": "origins:sneaking",
+							"inverted": true
+						},
+						{
+							"type": "origins:resource",
+							"resource": "leap:variables_exhaust",
+							"comparison": "<",
+							"compare_to": 100
+						},
+						{
+							"type": "origins:resource",
+							"resource": "leap:variables_tired",
+							"comparison": "==",
+							"compare_to": 0
+						},
+						{
+							"type": "origins:riding",
+							"inverted": true
+						}
+					]
+				}
+			},
+			{
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:add_velocity",
+							"space": "local",
+							"z": -1.7
+						},
+						{
+							"type": "origins:change_resource",
+							"resource": "leap:variables_exhaust",
+							"change": 18
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "particle minecraft:smoke ~ ~0.2 ~ 0.5 0 0.5 0 20 normal @s"
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "entity.fox.spit",
+							"volume": 10.0,
+							"pitch": 0.3
+						},
+						{
+							"type": "origins:exhaust",
+							"amount": 0.1
+						}
+					]
+				},
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:sneaking"
+						},
+						{
+							"type": "origins:resource",
+							"resource": "leap:variables_exhaust",
+							"comparison": "<",
+							"compare_to": 100
+						},
+						{
+							"type": "origins:resource",
+							"resource": "leap:variables_tired",
+							"comparison": "==",
+							"compare_to": 0
+						},
+						{
+							"type": "origins:riding",
+							"inverted": true
+						}
+					]
+				}
+			}
+		]
+	},
+    "cooldown": 4,
+    "hud_render": {
+        "should_render": true,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+		"bar_index": 16
+    },
+    "key": {
+        "key": "key.jump"
+    },
+	"hidden": false,
+	"name": "Energy Leap",
+	"description": "You can use your space key while airborne to 'leap' for a certain distance, shifting reverses the direction of your leap but gives you more distance. If you leap too often, you will get tired and need to rest for a little!"
+}

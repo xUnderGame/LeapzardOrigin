@@ -1,0 +1,22 @@
+{
+    "powers": [
+		"origins:climbing",
+		"origins:carnivore",
+		"origins:light_armor",
+		"origins:cat_vision",
+		"origins:no_shield",
+		"leap:variables",
+		"leap:high-confidence",
+		"leap:tongue",
+		"leap:downpour",
+		"leap:balloon",
+		"leap:particles",
+		"leap:basics",
+		"leap:leap",
+		"leap:big-body"
+    ],
+    "icon": "minecraft:light_blue_dye",
+    "impact": 2,
+    "name": "Leapzard",
+    "description": "The Cyan Lizard or Leapzard is a dangerous predator. Equipped with sticky tongues and the ability to launch themselves at high speeds after their prey."
+}

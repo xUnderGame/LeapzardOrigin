@@ -1,0 +1,26 @@
+{
+    "type": "origins:damage_over_time",
+    "interval": 10,
+    "onset_delay": 10,
+    "damage": 1.5,
+    "protection_enchantment": "origins:water_protection",
+    "protection_effectiveness": 0.4,
+    "damage_source": {
+        "name": "hurt_by_water",
+        "unblockable": true,
+        "bypasses_armor": true
+    },
+    "condition": {
+        "type": "origins:in_rain"
+    },
+    "hidden": false,
+    "name": "Downpour",
+    "description": "You will take §cHEAVY damage§7 while §bunder the rain§7.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You can get invincibility frames by using the 'Water Protection' enchantment, scales with levels and pieces of armor."
+        }
+    ]
+}

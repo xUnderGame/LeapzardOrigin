@@ -1,0 +1,30 @@
+{
+  "type": "origins:multiple",
+  "exhaust": {
+    "type": "origins:resource",
+    "start_value": 0,
+    "min": 0,
+    "max": 100,
+    "hud_render": {
+      "should_render": true,
+      "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+      "bar_index": 3
+    },
+    "max_action": {
+      "type": "origins:trigger_cooldown",
+      "power": "leap:variables_tired"
+    }
+  },
+  "tired": {
+    "type": "origins:cooldown",
+    "cooldown": 200,
+    "hud_render": {
+      "should_render": true,
+      "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+      "bar_index": 8
+    }
+  },
+  "hidden": true,
+  "name": "Variables",
+  "description": "All the Origin's variables."
+}

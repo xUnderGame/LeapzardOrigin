@@ -1,0 +1,44 @@
+{
+	"type": "origins:multiple",
+	"normal-particle": {
+		"type": "origins:particle",
+		"particle": "minecraft:scrape",
+		"frequency": 2,
+		"condition": {
+			"type": "origins:health",
+			"comparison": ">",
+			"compare_to": 5
+		}
+	},
+	"damaged-particle": {
+		"type": "origins:particle",
+		"particle": "minecraft:end_rod",
+		"frequency": 2,
+		"condition": {
+			"type": "origins:health",
+			"comparison": "<",
+			"compare_to": 6
+		}
+	},
+	"tired-particle": {
+		"type": "origins:particle",
+		"particle": "minecraft:nautilus",
+		"frequency": 1,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "leap:variables_tired",
+			"comparison": ">",
+			"compare_to": 0	 
+		}
+	},
+	"hidden": false,
+	"name": "Particles",
+	"description": "You emit particles showing your enemies if you are damaged or tired.",
+	"badges": [
+		{
+			"type": "origins:tooltip",
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "Scrape: Normal particles, End Rod: Tired, Nautilus: Badly damaged."
+		}
+	]
+}

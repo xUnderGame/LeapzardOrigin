@@ -1,0 +1,170 @@
+{
+	"type": "origins:action_when_hit",
+	"bientity_action": {
+		"type": "origins:target_action",
+		"action": {
+			"type": "origins:chance",
+			"action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "playsound minecraft:entity.bat.takeoff master @p ~ ~ ~ 10 1.6"	
+					},
+					{
+						"type": "origins:add_velocity",
+						"space": "local",
+						"x": 0.6,
+						"z": -0.9
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 10,
+						"action": {
+							"type": "origins:execute_command",
+							"command": "playsound minecraft:entity.fox.spit master @p ~ ~ ~ 10 1.2"	
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 10,
+						"action": {
+							"type": "origins:add_velocity",
+							"space": "local",
+							"y": 0.6,
+							"z": 1
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 16,
+						"action": {
+							"type": "origins:execute_command",
+							"command": "playsound minecraft:entity.fox.spit master @p ~ ~ ~ 10 0.3"	
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 16,
+						"action": {
+							"type": "origins:add_velocity",
+							"space": "local",
+							"y": -0.4
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 20,
+						"action": {
+							"type": "origins:execute_command",
+							"command": "playsound minecraft:entity.fox.spit master @p ~ ~ ~ 10 0.9"	
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 20,
+						"action": {
+							"type": "origins:add_velocity",
+							"space": "local",
+							"y": 0.6,
+							"z": -1
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 25,
+						"action": {
+							"type": "origins:execute_command",
+							"command": "playsound minecraft:entity.fox.spit master @p ~ ~ ~ 10 2"	
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 25,
+						"action": {
+							"type": "origins:add_velocity",
+							"space": "local",
+							"x": -1,
+							"z": -1.4
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 35,
+						"action": {
+							"type": "origins:execute_command",
+							"command": "playsound minecraft:entity.fox.spit master @p ~ ~ ~ 10 0.6"	
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 35,
+						"action": {
+							"type": "origins:add_velocity",
+							"space": "local",
+							"y": 0.3,
+							"z": 0.8
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 45,
+						"action": {
+							"type": "origins:execute_command",
+							"command": "playsound minecraft:entity.fox.spit master @p ~ ~ ~ 10 0"	
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 45,
+						"action": {
+							"type": "origins:add_velocity",
+							"space": "local",
+							"y": 0.6,
+							"z": 1
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 52,
+						"action": {
+							"type": "origins:execute_command",
+							"command": "playsound minecraft:entity.fox.spit master @p ~ ~ ~ 10 1.2"	
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 52,
+						"action": {
+							"type": "origins:add_velocity",
+							"space": "local",
+							"y": -0.4,
+							"x": -0.8
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 60,
+						"action": {
+							"type": "origins:execute_command",
+							"command": "playsound minecraft:entity.fox.spit master @p ~ ~ ~ 10 0.6"	
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 60,
+						"action": {
+							"type": "origins:add_velocity",
+							"space": "local",
+							"z": -1
+						}
+					}
+				]
+			},
+			"chance": 0.15
+		}
+	},
+	"hidden": false,
+	"name": "Balloon",
+	"description": "You have a 15% chance to deflate like a balloon and jump everywhere when attacked. Weee...?"
+}

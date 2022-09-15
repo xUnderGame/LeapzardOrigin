@@ -1,0 +1,76 @@
+{
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:raycast",
+		"distance": 9,
+		"block": false,
+		"entity": true,
+		"shape_type": "collider",
+		"fluid_handling": "any",
+		"bientity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:add_velocity",
+					"y": 0.5,
+					"z": -2
+				},
+				{
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:apply_effect",
+								"effect": {
+									"effect": "minecraft:slowness",
+									"duration": 140,
+									"amplifier": 1,
+									"is_ambient": true,
+									"show_particles": false,
+									"show_icon": true
+								}
+							},
+							{
+								"type": "origins:damage",
+								"amount": 2,
+								"source": {
+									"name": "sting",
+									"bypasses_armor": true
+								}
+							},
+							{
+								"type": "origins:drop_inventory",
+								"slot": "weapon.offhand",
+								"throw_randomly": true,
+								"retain_ownership": false
+							}
+						]
+					}
+				}
+			]
+		},
+		"hit_action": {
+			"type": "origins:execute_command",
+			"command": "title @s actionbar {\"text\":\"Caught something, yum!\",\"color\":\"green\"}"
+		},
+		"miss_action": {
+			"type": "origins:execute_command",
+			"command": "title @s actionbar {\"text\":\"You missed.\",\"color\":\"red\"}"
+		},
+		"command_along_ray": "particle minecraft:smoke",
+		"command_step": 0.1
+	},
+    "cooldown": 300,
+    "hud_render": {
+        "should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+		"bar_index": 5
+    },
+    "key": {
+        "key": "key.origins.secondary_active"
+    },
+	"hidden": false,
+	"name": "Lizard Tongue",
+	"description": "You can aim and use your small tongue to pull an entity in a 9 block distance from you, dealing 1 heart of damage, slowing them and dropping their offhand item. Yum!"
+}

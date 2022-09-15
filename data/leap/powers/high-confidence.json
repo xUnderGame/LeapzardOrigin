@@ -1,0 +1,48 @@
+{
+	"type": "origins:multiple",
+	"fall-inv" : {
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:name",
+			"name": "fall"
+		},
+		"condition": {
+			"type": "origins:fall_distance",
+			"comparison": "<=",
+			"compare_to": 15
+		}		
+	},
+	"fall-bonus": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:from_falling"
+		},
+		"modifier": {
+			"operation": "multiply_base",
+			"value": -0.3
+		}
+	},
+	"fire-bonus": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:fire"
+		},
+		"modifier": {
+			"operation": "multiply_base",
+			"value": 0.4
+		}
+	},
+	"arrow-bonus": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:projectile"
+		},
+		"modifier": {
+			"operation": "multiply_base",
+			"value": 0.4
+		}
+	},
+    "hidden": false,
+    "name": "High Confidence",
+    "description": "As confident as a Cyan can get, you won't take fall damage for 15 blocks, but will have increased fall damage after those 15! Fire and arrows also deal more damage, ouch."
+}

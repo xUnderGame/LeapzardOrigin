@@ -1,0 +1,114 @@
+{
+	"type": "origins:multiple",
+	"jump": {
+		"type": "origins:modify_jump",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.4
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "leap:variables_tired",
+			"comparison": "==",
+			"compare_to": 0
+		}
+	},
+	"swim": {
+		"type": "origins:modify_swim_speed",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": -0.4
+		}
+	},
+	"airborne-dmg": {
+		"type": "origins:modify_damage_dealt",
+		"condition": {
+			"type": "origins:on_block",
+			"inverted": true
+		},
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.3
+		}
+	},
+	"drain": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "leap:variables_exhaust",
+			"operation": "add",
+			"change": -12
+		},
+		"interval": 60,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "leap:variables_tired",
+			"comparison": "==",
+			"compare_to": 0	 
+		}
+	},
+	"tired-drain": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "leap:variables_exhaust",
+			"operation": "add",
+			"change": -5
+		},
+		"interval": 70,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "leap:variables_tired",
+			"comparison": ">",
+			"compare_to": 0 
+		}
+	},
+	"tired-effects": {
+		"type": "origins:stacking_status_effect",
+		"min_stacks": 0,
+		"max_stacks": 2,
+		"duration_per_stack": 30,
+		"effects": [
+			{
+				"effect": "minecraft:weakness",
+				"amplifier": 0,
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": true
+			},
+			{
+				"effect": "minecraft:slowness",
+				"amplifier": 1,
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": true
+			}
+		],
+		"condition": {
+			"type": "origins:resource",
+			"resource": "leap:variables_tired",
+			"comparison": ">",
+			"compare_to": 0
+		}
+	},
+	"tired-movement": {
+		"type": "origins:modify_velocity",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": -0.6
+		},
+		"axes": [
+			"x",
+			"z"
+		],
+		"condition": {
+			"type": "origins:resource",
+			"resource": "leap:variables_tired",
+			"comparison": ">",
+			"compare_to": 0	 
+		}
+	},
+	"hidden": false,
+	"name": "Clashing Air",
+	"description": "You deal 30% more damage while airborne! (Jumping counts as being airborne)."
+}
