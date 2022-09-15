@@ -3,8 +3,6 @@ Adds the custom Leapzard Origin to Minecraft.
 
 **Intended Minecraft Version**: 1.19.
 
-If you are trying to use this on another version that isn't 1.19 you will need to edit the file "grab.json" and remove the allay and other 1.19 mobs.
-
 **Intended Origin Versions**: [Fabric](https://www.curseforge.com/minecraft/mc-mods/origins), should work on [Forge](https://www.curseforge.com/minecraft/mc-mods/origins-forge) aswell.
 
 ## How to Install?
